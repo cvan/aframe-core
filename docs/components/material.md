@@ -20,7 +20,6 @@ cube.
 | height       | Height of video if defining a video texture.                                                                                                   | 360           |
 | metalness    | How metallic the material is from 0 to 1. Does not apply if `shader` is set to `flat`.                                                         | 0.5           |
 | opacity      | Extent of transparency. If the `transparent` attribute is not true, then the material will remain opaque and `opacity` will only affect color. | 1.0           |
-| reflectivity | How reflective the material is from 0 to 1 if the `envMap` attribute is set.                                                                   | 1.0           |
 | repeat       | How many times a texture (defined by `src`) repeats in the X and Y direction.                                                                  | 1 1           |
 | roughness    | How rough the material is from 0 to 1. A rougher material will scatter reflected light in more directions than a smooth material. Does not apply if `shader` is set to `flat` | 0.5 |
 | transparent  | Whether material is transparent. Transparent entities are rendered after non-transparent entities.                                             | false         |
@@ -72,8 +71,7 @@ also works together with plain textures. Though unlike regular texture maps,
 the `envMap` attribute takes a cubemap, six images put together to form a cube.
 The cubemap is wrapped around the entity and applied as a texture.
 
-If shader is set to `standard`, which it is by default, the clarity of the reflection
-depends on the `metalness`, `roughness`, and `reflectivity` attributes.
+If shader is set to `standard`, which it is by default, the clarity of the reflection depends on the `metalness` and `roughness` attributes.
 
 ```html
 <a-assets>
